@@ -9,9 +9,12 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [0.0.1] - 2026-06-03
 
+## [0.0.1] - 2026-06-03
+
 ### Changed
 
 - testing
 
 [Unreleased]: https://github.com/giantswarm/release-test-app/compare/v0.0.1...HEAD
+[0.0.1]: https://github.com/giantswarm/release-test-app/compare/v0.0.1...v0.0.1
 [0.0.1]: https://github.com/giantswarm/release-test-app/compare/v0.0.1...v0.0.1
