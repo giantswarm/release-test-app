@@ -9,6 +9,8 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [2.1.0-rc.1] - 2026-06-03
 
+- direct major v2 bump
+
 ## [2.0.0] - 2026-06-03
 
 ### Changed
