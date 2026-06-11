@@ -7,6 +7,8 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+## [2.1.0-rc.3] - 2026-06-11
+
 ## [2.1.0-rc.2] - 2026-06-03
 
 ### Added
@@ -89,7 +91,8 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 - testing
 
-[Unreleased]: https://github.com/giantswarm/release-test-app/compare/v2.1.0-rc.2...HEAD
+[Unreleased]: https://github.com/giantswarm/release-test-app/compare/v2.1.0-rc.3...HEAD
+[2.1.0-rc.3]: https://github.com/giantswarm/release-test-app/compare/v2.1.0-rc.2...v2.1.0-rc.3
 [2.1.0-rc.2]: https://github.com/giantswarm/release-test-app/compare/v2.1.0-rc.1...v2.1.0-rc.2
 [2.1.0-rc.1]: https://github.com/giantswarm/release-test-app/compare/v2.0.0...v2.1.0-rc.1
 [2.0.0]: https://github.com/giantswarm/release-test-app/compare/v1.0.0...v2.0.0
