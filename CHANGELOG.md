@@ -7,6 +7,9 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Fixed
+
+- Drop the version badges from the chart README so a release PR's `Chart.yaml` version bump no longer leaves `README.md` stale and fails the helm-docs pre-commit hook.
 ### Changed
 
 - developers!
