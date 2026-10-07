@@ -13,6 +13,7 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 ### Changed
 
 - developers!
+- CI: use the released `architect` orb v10.12.1 instead of an expired dev orb, so CircleCI builds and publishes the chart again.
 
 ## [2.1.1-rc.1] - 2026-06-11
 
