@@ -5,5 +5,5 @@ smoke-tests-cluster-type: kind
 
 functional-tests-cluster-type: kind
 
-upgrade-tests-cluster-type: kind
-upgrade-tests-app-catalog-url: https://giantswarm.github.io/giantswarm-catalog
+# No stable release of the chart under this name exists in the catalog to upgrade from.
+skip-steps: upgrade
