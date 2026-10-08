@@ -71,7 +71,7 @@
                     "type": "string"
                 },
                 "tag": {
-                    "description": "Overrides the image tag whose default is the chart appVersion.",
+                    "description": "Image tag. Pinned, as the build sets appVersion to the chart version and the image has no such tag.",
                     "type": "string"
                 }
             },

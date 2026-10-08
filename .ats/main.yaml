@@ -1,9 +1,9 @@
-app-tests-app-config-file: helm/hello-world/ci/ci-values.yaml
+app-tests-app-config-file: helm/release-test-app/ci/ci-values.yaml
 app-tests-deploy-namespace: hello-world
 
 smoke-tests-cluster-type: kind
 
 functional-tests-cluster-type: kind
 
-upgrade-tests-cluster-type: kind
-upgrade-tests-app-catalog-url: https://giantswarm.github.io/giantswarm-catalog
+# No stable release of the chart under this name exists in the catalog to upgrade from.
+skip-steps: upgrade

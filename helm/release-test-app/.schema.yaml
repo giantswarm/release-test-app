@@ -2,11 +2,11 @@
 # yaml-language-server: $schema=https://github.com/losisin/helm-values-schema-json/raw/refs/heads/main/config.schema.json
 
 values:
-  - helm/hello-world/values.yaml
+  - helm/release-test-app/values.yaml
 
 draft: 2020
 indent: 4
-output: helm/hello-world/values.schema.json
+output: helm/release-test-app/values.schema.json
 
 # We enable bundling as the Kubernetes schema is large, and helm only permits 15 seconds to fetch them.
 # We have seen cases where helm timed out before fully fetching the schema.

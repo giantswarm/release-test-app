@@ -17,7 +17,7 @@ Install this app from the Giant Swarm catalog using the web UI or kubectl gs. Se
 
 ## Configuration
 
-Please refer to the chart's [README.md](https://github.com/giantswarm/hello-world-app/blob/main/helm/hello-world/README.md).
+Please refer to the chart's [README.md](https://github.com/giantswarm/hello-world-app/blob/main/helm/release-test-app/README.md).
 
 ## Learn more
 
