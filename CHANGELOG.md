@@ -14,6 +14,7 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 ### Changed
 
 - Rename the chart and its directory to `release-test-app`, so it matches the repository name. The architect orb refuses to publish a chart with another name.
+- Pin the `helloworld` image tag to `0.3.0`, as the build sets `appVersion` to the chart version and no image has that tag.
 - developers!
 - CI: use the released `architect` orb v10.12.1 instead of an expired dev orb, so CircleCI builds and publishes the chart again.
 

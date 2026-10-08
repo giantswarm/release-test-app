@@ -13,11 +13,11 @@ A chart that deploys a basic hello world site and lets you test values merging o
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | replicaCount | int | `1` | This will set the replicaset count more information can be found here: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/ |
-| image | object | `{"name":"giantswarm/helloworld","pullPolicy":"IfNotPresent","registry":"gsoci.azurecr.io","tag":""}` | This sets the container image more information can be found here: https://kubernetes.io/docs/concepts/containers/images/ |
+| image | object | `{"name":"giantswarm/helloworld","pullPolicy":"IfNotPresent","registry":"gsoci.azurecr.io","tag":"0.3.0"}` | This sets the container image more information can be found here: https://kubernetes.io/docs/concepts/containers/images/ |
 | image.registry | string | `"gsoci.azurecr.io"` | Container image registry |
 | image.name | string | `"giantswarm/helloworld"` | Container image repository |
 | image.pullPolicy | string | `"IfNotPresent"` | This sets the pull policy for images. |
-| image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
+| image.tag | string | `"0.3.0"` | Image tag. Pinned, as the build sets appVersion to the chart version and the image has no such tag. |
 | imagePullSecrets | list | `[]` | This is for the secretes for pulling an image from a private repository more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/ |
 | nameOverride | string | `""` | This is to override the chart name. |
 | fullnameOverride | string | `""` | Override the full name of the chart |
