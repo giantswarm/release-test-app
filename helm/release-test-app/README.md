@@ -1,4 +1,4 @@
-# test-release
+# release-test-app
 
 A chart that deploys a basic hello world site and lets you test values merging of user values configmap and secrets.
 
