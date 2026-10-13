@@ -17,6 +17,7 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 - Pin the `helloworld` image tag to `0.3.0`, as the build sets `appVersion` to the chart version and no image has that tag.
 - developers!
 - CI: use the released `architect` orb v10.12.1 instead of an expired dev orb, so CircleCI builds and publishes the chart again.
+- CI: create releases and release PRs with the `giantswarm-release` GitHub App instead of the taylorbot token, and validate the changelog with the `main` workflow again.
 
 ## [2.1.1-rc.1] - 2026-06-11
 
