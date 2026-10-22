@@ -1,0 +1,47 @@
+name: Reservation command
+
+# Sends a `/deploy` comment on a pull request to giantswarm/mc-reservations,
+# which authorises the commenter and makes the reservation. This workflow is a
+# pure trigger: it holds no trust, checks nothing and never checks out pull
+# request code. It sends only which comment to read; mc-reservations re-reads
+# everything else from the GitHub API.
+#
+# Setup: https://github.com/giantswarm/mc-reservations/blob/main/docs/provisioning.md#part-c--the-app-that-sends-the-dispatch-needed-by-slice-09
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions: {}
+
+jobs:
+  dispatch:
+    # Bot comments skip the run, so the answers of mc-reservations start nothing.
+    if: >-
+      github.event.issue.pull_request &&
+      github.event.comment.user.type != 'Bot' &&
+      contains(github.event.comment.body, '/deploy')
+    runs-on: ubuntu-24.04
+    permissions: {}
+    steps:
+      - name: Mint the dispatch token
+        id: app-token
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        with:
+          client-id: ${{ secrets.MC_RESERVATIONS_DISPATCH_CLIENT_ID }}
+          private-key: ${{ secrets.MC_RESERVATIONS_DISPATCH_APP_KEY }}
+          owner: giantswarm
+          repositories: mc-reservations
+
+      - name: Send the comment to mc-reservations
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.issue.number }}
+          COMMENT_ID: ${{ github.event.comment.id }}
+        run: |
+          set -euo pipefail
+          jq -n --arg repo "${REPO}" --arg pr "${PR_NUMBER}" --arg comment "${COMMENT_ID}" \
+            '{event_type: "reservation-command", client_payload: {repo: $repo, pr_number: $pr, comment_id: $comment}}' \
+            | gh api -X POST /repos/giantswarm/mc-reservations/dispatches --input -
+          echo "Sent. The result is in https://github.com/giantswarm/mc-reservations/actions and on this pull request."
