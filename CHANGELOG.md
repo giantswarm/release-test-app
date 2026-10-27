@@ -17,6 +17,7 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+- CI: replace the hand-written reservation trigger with the devctl-generated `zz_generated.reservation_command.yaml`, which calls the shared `reservation-command` workflow of `giantswarm/github-workflows`.
 - CI: architect orb 10.16.4, which pushes the chart to the git catalog with the architect GitHub App instead of the `catalogbot` account.
 - Rename the chart and its directory to `release-test-app`, so it matches the repository name. The architect orb refuses to publish a chart with another name.
 - Pin the `helloworld` image tag to `0.3.0`, as the build sets `appVersion` to the chart version and no image has that tag.
