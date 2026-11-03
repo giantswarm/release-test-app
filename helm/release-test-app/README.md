@@ -12,7 +12,7 @@ A chart that deploys a basic hello world site and lets you test values merging o
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| replicaCount | int | `1` | This will set the replicaset count more information can be found here: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/ |
+| replicaCount | int | `2` | This will set the replicaset count more information can be found here: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/ |
 | image | object | `{"name":"giantswarm/helloworld","pullPolicy":"IfNotPresent","registry":"gsoci.azurecr.io","tag":"0.3.0"}` | This sets the container image more information can be found here: https://kubernetes.io/docs/concepts/containers/images/ |
 | image.registry | string | `"gsoci.azurecr.io"` | Container image registry |
 | image.name | string | `"giantswarm/helloworld"` | Container image repository |
