@@ -7,6 +7,8 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [2.3.0-rc.1] - 2026-11-04
+
 ### Added
 
 - CI: send `/deploy` pull request comments to `giantswarm/mc-reservations`, which reserves the app on a management cluster.
