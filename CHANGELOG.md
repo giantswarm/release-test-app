@@ -7,6 +7,26 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [2.3.0] - 2026-11-05
+
+### Added
+
+- CI: send `/deploy` pull request comments to `giantswarm/mc-reservations`, which reserves the app on a management cluster.
+
+### Changed
+
+- This release aggregates all changes from release candidate 2.3.0-rc.1.
+- CI: remove the hand-written `reservation-command.yaml`, as align-files now generates `zz_generated.reservation_command.yaml` (`gen.reservationSupport`).
+- CI: architect orb 10.16.4, which pushes the chart to the git catalog with the architect GitHub App instead of the `catalogbot` account.
+- Rename the chart and its directory to `release-test-app`, so it matches the repository name. The architect orb refuses to publish a chart with another name.
+- Pin the `helloworld` image tag to `0.3.0`, as the build sets `appVersion` to the chart version and no image has that tag.
+- developers!
+- CI: use the released `architect` orb v10.12.1 instead of an expired dev orb, so CircleCI builds and publishes the chart again.
+
+### Fixed
+
+- Drop the version badges from the chart README so a release PR's `Chart.yaml` version bump no longer leaves `README.md` stale and fails the helm-docs pre-commit hook.
+
 ## [2.3.0-rc.1] - 2026-11-05
 
 ### Added
@@ -126,7 +146,8 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 - testing
 
-[Unreleased]: https://github.com/giantswarm/release-test-app/compare/v2.3.0-rc.1...HEAD
+[Unreleased]: https://github.com/giantswarm/release-test-app/compare/v2.3.0...HEAD
+[2.3.0]: https://github.com/giantswarm/release-test-app/compare/v2.3.0-rc.1...v2.3.0
 [2.3.0-rc.1]: https://github.com/giantswarm/release-test-app/compare/v2.1.1-rc.1...v2.3.0-rc.1
 [2.1.1-rc.1]: https://github.com/giantswarm/release-test-app/compare/v2.1.0...v2.1.1-rc.1
 [2.1.0]: https://github.com/giantswarm/release-test-app/compare/v2.1.0-rc.3...v2.1.0
